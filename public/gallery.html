@@ -85,20 +85,28 @@
 
   <div class="carousel">
     <div class="carousel__container">
-      <div class="carousel__item"><img src="images/3.jpeg"><p>Laughing Together 😄</p></div>
-      <div class="carousel__item"><img src="images/1.jpeg"><p>Our First Meet 💕</p></div>
-      <div class="carousel__item"><img src="images/2.jpeg"><p>Festival Fun 🪔</p></div>
-      <div class="carousel__item"><img src="images/4.jpeg"><p>Road Trip 🚗</p></div>
-      <div class="carousel__item"><img src="images/5.jpeg"><p>Movie Night 🎬</p></div>
-      <div class="carousel__item"><img src="images/6.jpeg"><p>Just Us 💞</p></div>
-      <div class="carousel__item"><img src="images/7.jpeg"><p>Birthday Bash 🎂</p></div>
-      <div class="carousel__item"><img src="images/8.jpeg"><p>Selfie Time 📸</p></div>
-      <div class="carousel__item"><img src="images/9.jpeg"><p>Beach Day 🏖️</p></div>
-      <div class="carousel__item"><img src="images/10.jpeg"><p>Casual Stroll 🚶‍♀️🚶‍♂️</p></div>
+     <div class="carousel__item"><img src="images/1.jpeg"><p>Our First Meet 💕</p></div>
+<div class="carousel__item"><img src="images/2.jpeg"><p>Festival Fun 🪔</p></div>
+<div class="carousel__item"><img src="images/3.jpeg"><p>Laughing Together 😄</p></div>
+<div class="carousel__item"><img src="images/4.jpeg"><p>Road Trip 🚗</p></div>
+<div class="carousel__item"><img src="images/5.jpeg"><p>Movie Night 🎬</p></div>
+<div class="carousel__item"><img src="images/6.jpeg"><p>Just Us 💞</p></div>
+<div class="carousel__item"><img src="images/7.jpeg"><p>Birthday Bash 🎂</p></div>
+<div class="carousel__item"><img src="images/8.jpeg"><p>Selfie Time 📸</p></div>
+<div class="carousel__item"><img src="images/9.jpeg"><p>Beach Day 🏖️</p></div>
+<div class="carousel__item"><img src="images/10.jpeg"><p>Casual Stroll 🚶‍♀️🚶‍♂️</p></div>
+<div class="carousel__item"><img src="images/11.jpeg"><p>Park Walk 🌳</p></div>
+<div class="carousel__item"><img src="images/12.jpeg"><p>Festival Vibes 🎉</p></div>
+<div class="carousel__item"><img src="images/13.jpeg"><p>Night Out 🌃</p></div>
+<div class="carousel__item"><img src="images/15.jpeg"><p>Picnic Fun 🧺</p></div>
+<div class="carousel__item"><img src="images/16.jpeg"><p>Long Drive 🚙</p></div>
+<div class="carousel__item"><img src="images/17.jpeg"><p>Celebrations 🎊</p></div>
+<div class="carousel__item"><img src="images/18.jpeg"><p>City Lights 🌆</p></div>
+
     </div>
   </div>
 
-  <audio id="bg-music" src="images/Koi Tumsa Nahin Lyrical Video Song _ Krrish _ Hrithik Roshan_ Priyanka Chopra(M4A_128K) copy.m4a" loop></audio>
+  <audio id="bg-music" src="images/Surili Akhiyon Wale (Lyrics)_Veer_Salman Khan_Zarine Khan_Rahat Fateh Ali Khan_(MP3_70K).mp3" loop></audio>
 
   <script>
     // Background color
@@ -177,15 +185,15 @@
       const totalItems = items.length;
       const screenWidth = window.innerWidth;
       const screenHeight = window.innerHeight;
-      const radius = Math.min(screenWidth, screenHeight) / 1.1;
-      const imgWidth = 160;
+      const radius = Math.min(screenWidth, screenHeight) / 1.05;
+      const imgWidth = 150;
       const imgHeight = imgWidth * 1.35;
 
       items.forEach((item,i)=>{
         const angle = (360/totalItems)*i;
         item.style.transform = `rotateY(${angle}deg) translateZ(${radius}px)`;
         const rad = angle * (Math.PI/180);
-        item.style.opacity = 0.2 + 0.8*Math.abs(Math.sin(rad));
+        item.style.opacity = 0.1 + 0.95*Math.abs(Math.sin(rad));
         item.style.width = imgWidth + 'px';
         item.style.height = imgHeight + 'px';
         item.style.marginLeft = -(imgWidth/2) + 'px';
@@ -201,12 +209,12 @@
 
       // Music autoplay with skip 15s
       const music = document.getElementById("bg-music");
-      music.volume = 0.3;
+      music.volume = 0.6;
       const playedBefore = localStorage.getItem('musicPlayed');
 
       if(!playedBefore) {
         // first time, skip 15s
-        music.currentTime = 20;
+        music.currentTime = 25;
         localStorage.setItem('musicPlayed','true');
       }
 
